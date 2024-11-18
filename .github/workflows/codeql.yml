@@ -71,11 +71,9 @@ jobs:
         echo 'If you are using a "manual" build mode for one or more of the' \
           'languages you are analyzing, replace this with the commands to build' \
           'your code, for example:'
-        dotnet restore IWA.NET.sin
-        dotnet tool restore
-        dotnet msbuild IWA.NET.sin /p:Configuration=Debug /t:Clean,Build
+        dotnet restore InsecureWebApp/InsecureWebApp.csproj
+        dotnet build "InsecureWebApp.csproj" 
         echo "completed compilation"
-        exit 1
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
