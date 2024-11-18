@@ -40,11 +40,16 @@ jobs:
         include:
         - language: csharp
           build-mode: manual
-        - language: javascript-typescript
-          build-mode: none
+          #  - language: javascript-typescript
+            #build-mode: none
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    - name: List dirs
+      run: |
+          echo 'Listing dirs'
+          ls -R
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
