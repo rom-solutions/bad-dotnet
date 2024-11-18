@@ -77,7 +77,7 @@ jobs:
         echo ' restoring'
         dotnet restore "InsecureWebApp/InsecureWebApp.csproj"
         echo 'building'
-        dotnet build "InsecureWebApp.csproj" 
+        dotnet build "InsecureWebApp/InsecureWebApp.csproj" 
         echo "completed compilation"
 
     - name: Perform CodeQL Analysis
