@@ -73,10 +73,10 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
-        echo 'If you are using a "manual" build mode for one or more of the' \
-          'languages you are analyzing, replace this with the commands to build' \
-          'your code, for example:'
+        echo 'building dotnet manually'
+        echo ' restoring'
         dotnet restore "InsecureWebApp/InsecureWebApp.csproj"
+        echo 'building'
         dotnet build "InsecureWebApp.csproj" 
         echo "completed compilation"
 
