@@ -76,7 +76,7 @@ jobs:
         echo 'If you are using a "manual" build mode for one or more of the' \
           'languages you are analyzing, replace this with the commands to build' \
           'your code, for example:'
-        dotnet restore InsecureWebApp/InsecureWebApp.csproj
+        dotnet restore "InsecureWebApp/InsecureWebApp.csproj"
         dotnet build "InsecureWebApp.csproj" 
         echo "completed compilation"
 
